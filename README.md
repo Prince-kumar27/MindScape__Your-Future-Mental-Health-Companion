@@ -1,1 +1,1 @@
-# MindScape-Your-Future-Mental-Health-Companion
+# MindScape: Your-Future-Mental-Health-Companion
