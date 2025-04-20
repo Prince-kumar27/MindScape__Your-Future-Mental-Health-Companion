@@ -23,12 +23,27 @@ menu_icon = menu_icon.resize((1024, 1004))
 # Initialize Tweepy client
 client = tweepy.Client(bearer_token=BEARER_TOKEN)
 
+# # Load the trained model
+# with open(r"C:\Users\DELL\OneDrive\Desktop\XIX\Final year Project\sentiment_model.pkl", "rb") as file:
+#     model = pickle.load(file)
+
+# # Load the fitted vectorizer
+# with open(r"C:\Users\DELL\OneDrive\Desktop\XIX\Final year Project\tfidf_vectorizer.pkl", "rb") as file:
+#     vectorizer = pickle.load(file)
+import os
+import pickle
+
+# Get the current directory of the script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
 # Load the trained model
-with open(r"C:\Users\DELL\OneDrive\Desktop\XIX\Final year Project\sentiment_model.pkl", "rb") as file:
+model_path = os.path.join(current_dir, "sentiment_model.pkl")
+with open(model_path, "rb") as file:
     model = pickle.load(file)
 
 # Load the fitted vectorizer
-with open(r"C:\Users\DELL\OneDrive\Desktop\XIX\Final year Project\tfidf_vectorizer.pkl", "rb") as file:
+vectorizer_path = os.path.join(current_dir, "tfidf_vectorizer.pkl")
+with open(vectorizer_path, "rb") as file:
     vectorizer = pickle.load(file)
 
 
