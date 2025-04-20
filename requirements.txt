@@ -61,7 +61,7 @@ pytz==2025.2
 PyYAML==6.0.2
 referencing==0.36.2
 requests==2.32.3
-requests-toolbelt==0.10.1
+requests-toolbelt==0.7.0
 rpds-py==0.24.0
 rsa==4.9.1
 six==1.17.0
