@@ -30,19 +30,48 @@ client = tweepy.Client(bearer_token=BEARER_TOKEN)
 # # Load the fitted vectorizer
 # with open(r"C:\Users\DELL\OneDrive\Desktop\XIX\Final year Project\tfidf_vectorizer.pkl", "rb") as file:
 #     vectorizer = pickle.load(file)
-import os
-import pickle
+# import os
+# import pickle
 
-# Get the current directory of the script
-current_dir = os.path.dirname(os.path.abspath(__file__))
+# # Get the current directory of the script
+# current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# # Load the trained model
+# model_path = os.path.join(current_dir, "sentiment_model.pkl")
+# with open(model_path, "rb") as file:
+#     model = pickle.load(file)
+
+# # Load the fitted vectorizer
+# vectorizer_path = os.path.join(current_dir, "tfidf_vectorizer.pkl")
+# with open(vectorizer_path, "rb") as file:
+#     vectorizer = pickle.load(file)
+import requests
+import pickle
+import os
+
+# Define the raw URLs to the files on GitHub
+model_url = "https://github.com/Prince-kumar27/MindScape__Your-Future-Mental-Health-Companion/raw/main/sentiment_model.pkl"
+vectorizer_url = "https://github.com/Prince-kumar27/MindScape__Your-Future-Mental-Health-Companion/raw/main/tfidf_vectorizer.pkl"
+
+# Define the local paths to save the downloaded files
+model_path = "sentiment_model.pkl"
+vectorizer_path = "tfidf_vectorizer.pkl"
+
+# Download the model file
+response = requests.get(model_url)
+with open(model_path, "wb") as file:
+    file.write(response.content)
+
+# Download the vectorizer file
+response = requests.get(vectorizer_url)
+with open(vectorizer_path, "wb") as file:
+    file.write(response.content)
 
 # Load the trained model
-model_path = os.path.join(current_dir, "sentiment_model.pkl")
 with open(model_path, "rb") as file:
     model = pickle.load(file)
 
 # Load the fitted vectorizer
-vectorizer_path = os.path.join(current_dir, "tfidf_vectorizer.pkl")
 with open(vectorizer_path, "rb") as file:
     vectorizer = pickle.load(file)
 
