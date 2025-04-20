@@ -18,14 +18,6 @@ gitdb==4.0.12
 GitPython==3.1.44
 google-api-core==2.24.2
 google-api-python-client==2.167.0
-google-auth==2.39.0
-google-auth-httplib2==0.2.0
-google-cloud-core==2.4.3
-google-cloud-firestore==2.20.2
-google-cloud-storage==3.1.0
-google-crc32c==1.7.1
-google-resumable-media==2.7.2
-googleapis-common-protos==1.70.0
 grpcio==1.72.0rc1
 grpcio-status==1.71.0
 httplib2==0.22.0
@@ -52,9 +44,6 @@ pycparser==2.22
 pycryptodome==3.22.0
 pydeck==0.9.1
 PyJWT==2.10.1
-pyparsing==3.2.3
-Pyrebase==3.0.27
-Pyrebase4==4.8.0
 python-dateutil==2.9.0.post0
 python-jwt==2.0.1
 pytz==2025.2
