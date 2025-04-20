@@ -21,6 +21,7 @@ google-api-python-client==2.167.0
 grpcio==1.72.0rc1
 grpcio-status==1.71.0
 httplib2==0.22.0
+tweepy==4.15.0
 idna==3.10
 Jinja2==3.1.6
 jsonschema==4.23.0
